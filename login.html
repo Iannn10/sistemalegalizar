@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Legalizar - Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1 class="sistema-nome">Sistema Legalizar</h1>
+    <h2>Login</h2>
+    
+    <form action="principal.html" method="get">
+      <label for="user">Usuário</label>
+      <input type="text" id="user" name="user" required>
+      
+      <label for="pass">Senha</label>
+      <div class="input-group">
+        <input type="password" id="pass" name="pass" required>
+        <button type="button" class="password-toggle" id="passwordToggle" title="Mostrar senha">👁️</button>
+      </div>
+      
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+  </div>
+  
+  <script src="login.js"></script>
+</body>
+</html>
