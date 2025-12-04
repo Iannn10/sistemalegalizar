@@ -1,14 +1,10 @@
-/* ============================================
-   SISTEMA LEGALIZAR - Versão Ultra Simplificada
-   ============================================ */
+
 
 // Variáveis globais
 let empresas = [];
 let licencas = [];
 
-// ============================================
-// DADOS
-// ============================================
+
 
 function carregarDados() {
   let emp = localStorage.getItem('empresas');
@@ -23,9 +19,9 @@ function salvarDados() {
   localStorage.setItem('licencas', JSON.stringify(licencas));
 }
 
-// ============================================
+
 // FORMATAÇÃO
-// ============================================
+
 
 function formatarCPF(v) {
   let n = v.replace(/\D/g, '');
@@ -54,9 +50,9 @@ function formatarData(d) {
   return new Date(d).toLocaleDateString('pt-BR');
 }
 
-// ============================================
+
 // MÁSCARAS
-// ============================================
+
 
 function configurarMascaras() {
   let cpf = document.getElementById('cpf');
@@ -69,9 +65,9 @@ function configurarMascaras() {
   if (tel) tel.addEventListener('input', () => tel.value = formatarTelefone(tel.value));
 }
 
-// ============================================
+
 // CADASTROS
-// ============================================
+
 
 function cadastrarEmpresa(e) {
   e.preventDefault();
@@ -131,9 +127,9 @@ function cadastrarLicenca(e) {
   alert('Licença cadastrada!');
 }
 
-// ============================================
+
 // EXIBIÇÃO
-// ============================================
+
 
 function atualizarSelectEmpresas() {
   let sel = document.getElementById('empresaId');
@@ -279,9 +275,9 @@ function mostrarLicencas() {
   cont.innerHTML = achou ? html : '<tr><td colspan="6" class="sem-dados">Nenhuma licença encontrada.</td></tr>';
 }
 
-// ============================================
+
 // AÇÕES
-// ============================================
+
 
 function verEmpresa(id) {
   for (let i = 0; i < empresas.length; i++) {
@@ -346,9 +342,9 @@ function excluirLicenca(id) {
   alert('Licença excluída!');
 }
 
-// ============================================
+
 // INICIALIZAÇÃO
-// ============================================
+
 
 document.addEventListener('DOMContentLoaded', function() {
   carregarDados();
